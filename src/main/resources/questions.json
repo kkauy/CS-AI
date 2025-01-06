@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "title": "What should the government do about taxation?",
+    "choices": {
+      "A": "Reduce taxes, the government already takes too much money away from hard-working individuals.",
+      "B": "Increase taxes for the wealthy.",
+      "C": "Taxation should be based on carbon footprint.",
+      "D": "Stay out of it, the government has caused enough damage already."
+    },
+  "answers": {
+  "A": ["libertarian", "democrat"],
+  "B": ["democrat"],
+  "C": ["republican", "democrat"],
+  "D": ["green", "republican"]
+}
+  },
+  {
+    "id": 2,
+    "title": "What is your stance on healthcare?",
+    "choices": {
+      "A": "Support private healthcare systems.",
+      "B": "Expand public healthcare options for all.",
+      "C": "Promote healthcare reforms based on environmental impact.",
+      "D": "Minimize government involvement in healthcare."
+    },
+  "answers": {
+  "A": ["libertarian", "democrat"],
+  "B": ["democrat"],
+  "C": ["republican", "democrat"],
+  "D": ["green", "republican"]
+    }
+},
+  {
+    "id": 3,
+    "title": "What is your opinion on gun control?",
+    "choices": {
+      "A": "Protect the Second Amendment and gun ownership rights.",
+      "B": "Implement stricter background checks and gun control laws.",
+      "C": "Ban certain firearms to reduce violence.",
+      "D": "Allow states to decide their own policies on gun control."
+    },
+  "answers": {
+  "A": ["libertarian", "democrat"],
+  "B": ["democrat"],
+  "C": ["republican", "democrat"],
+  "D": ["green", "republican"]
+}
+  },
+  {
+    "id": 4,
+    "title": "How should the government address climate change?",
+    "choices": {
+      "A": "Focus on innovation and clean energy investments without harming businesses.",
+      "B": "Introduce stricter environmental regulations.",
+      "C": "Advocate for global initiatives like the Paris Agreement.",
+      "D": "Let the free market handle climate change solutions."
+    },
+    "answers": {
+      "A": ["libertarian", "democrat"],
+      "B": ["democrat"],
+      "C": ["republican", "democrat"],
+      "D": ["green", "republican"]
+    }
+  },
+  {
+    "id": 5,
+    "title": "What is your view on immigration policies?",
+    "choices": {
+      "A": "Strengthen border security and enforce immigration laws.",
+      "B": "Provide pathways to citizenship for undocumented immigrants.",
+      "C": "Focus on humanitarian approaches to asylum seekers.",
+      "D": "Reduce government interference and let communities handle immigration issues."
+    },
+    "answers": {
+      "A": ["libertarian", "democrat"],
+      "B": ["democrat"],
+      "C": ["republican", "democrat"],
+      "D": ["green", "republican"]
+    }
+  },
+  {
+    "id": 6,
+    "title": "How should education be managed in the U.S.?",
+    "choices": {
+      "A": "Promote school choice and charter schools.",
+      "B": "Increase funding for public schools and educators.",
+      "C": "Integrate environmental education into school curriculums.",
+      "D": "Allow parents and local communities to decide education policies."
+    },
+    "answers": {
+      "A": ["libertarian", "democrat"],
+      "B": ["democrat"],
+      "C": ["republican", "democrat"],
+      "D": ["green", "republican"]
+    }
+  },
+  {
+    "id": 7,
+    "title": "What is your stance on economic policies?",
+    "choices": {
+      "A": "Support free-market principles and reduce regulations.",
+      "B": "Increase minimum wage and support labor unions.",
+      "C": "Focus on sustainability and green economic initiatives.",
+      "D": "Limit government intervention and promote entrepreneurial growth."
+    },
+    "answers": {
+      "A": ["libertarian", "democrat"],
+      "B": ["democrat"],
+      "C": ["republican", "democrat"],
+      "D": ["green", "republican"]
+    }
+  },
+  {
+    "id": 8,
+    "title": "What is your view on government spending?",
+    "choices": {
+      "A": "Focus on reducing the national debt and cutting unnecessary programs.",
+      "B": "Increase spending on social welfare programs.",
+      "C": "Prioritize spending on environmental initiatives and renewable energy.",
+      "D": "Limit government spending and encourage private sector solutions."
+    },
+    "answers": {
+      "A": ["libertarian", "democrat"],
+      "B": ["democrat"],
+      "C": ["republican", "democrat"],
+      "D": ["green", "republican"]
+    }
+  },
+  {
+    "id": 9,
+    "title": "What is your opinion on national security?",
+    "choices": {
+      "A": "Strengthen the military and increase defense budgets.",
+      "B": "Focus on diplomacy and reduce military spending.",
+      "C": "Address national security through global cooperation on climate and resource management.",
+      "D": "Minimize government control and allow local communities to manage safety."
+    },
+    "answers": {
+      "A": ["libertarian", "democrat"],
+      "B": ["democrat"],
+      "C": ["republican", "democrat"],
+      "D": ["green", "republican"]
+    }
+  },
+  {
+    "id": 10,
+    "title": "How should the government handle criminal justice reform?",
+    "choices": {
+      "A": "Enforce stricter laws and support law enforcement.",
+      "B": "Focus on rehabilitation and reducing incarceration rates.",
+      "C": "Address systemic issues like environmental justice in affected communities.",
+      "D": "Limit government involvement and allow communities to create solutions."
+    },
+    "answers": {
+      "A": ["libertarian", "democrat"],
+      "B": ["democrat"],
+      "C": ["republican", "democrat"],
+      "D": ["green", "republican"]
+    }
+  }
+]
+
