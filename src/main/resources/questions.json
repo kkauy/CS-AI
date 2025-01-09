@@ -8,12 +8,23 @@
       "C": "Taxation should be based on carbon footprint.",
       "D": "Stay out of it, the government has caused enough damage already."
     },
-  "answers": {
-  "A": ["libertarian", "democrat"],
-  "B": ["democrat"],
-  "C": ["republican", "democrat"],
-  "D": ["green", "republican"]
-}
+    "answers": {
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
+    }
   },
   {
     "id": 2,
@@ -24,13 +35,24 @@
       "C": "Promote healthcare reforms based on environmental impact.",
       "D": "Minimize government involvement in healthcare."
     },
-  "answers": {
-  "A": ["libertarian", "democrat"],
-  "B": ["democrat"],
-  "C": ["republican", "democrat"],
-  "D": ["green", "republican"]
+    "answers": {
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
-},
+  },
   {
     "id": 3,
     "title": "What is your opinion on gun control?",
@@ -40,12 +62,23 @@
       "C": "Ban certain firearms to reduce violence.",
       "D": "Allow states to decide their own policies on gun control."
     },
-  "answers": {
-  "A": ["libertarian", "democrat"],
-  "B": ["democrat"],
-  "C": ["republican", "democrat"],
-  "D": ["green", "republican"]
-}
+    "answers": {
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
+    }
   },
   {
     "id": 4,
@@ -57,10 +90,21 @@
       "D": "Let the free market handle climate change solutions."
     },
     "answers": {
-      "A": ["libertarian", "democrat"],
-      "B": ["democrat"],
-      "C": ["republican", "democrat"],
-      "D": ["green", "republican"]
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
   },
   {
@@ -73,10 +117,21 @@
       "D": "Reduce government interference and let communities handle immigration issues."
     },
     "answers": {
-      "A": ["libertarian", "democrat"],
-      "B": ["democrat"],
-      "C": ["republican", "democrat"],
-      "D": ["green", "republican"]
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
   },
   {
@@ -89,10 +144,21 @@
       "D": "Allow parents and local communities to decide education policies."
     },
     "answers": {
-      "A": ["libertarian", "democrat"],
-      "B": ["democrat"],
-      "C": ["republican", "democrat"],
-      "D": ["green", "republican"]
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
   },
   {
@@ -105,10 +171,21 @@
       "D": "Limit government intervention and promote entrepreneurial growth."
     },
     "answers": {
-      "A": ["libertarian", "democrat"],
-      "B": ["democrat"],
-      "C": ["republican", "democrat"],
-      "D": ["green", "republican"]
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
   },
   {
@@ -121,10 +198,21 @@
       "D": "Limit government spending and encourage private sector solutions."
     },
     "answers": {
-      "A": ["libertarian", "democrat"],
-      "B": ["democrat"],
-      "C": ["republican", "democrat"],
-      "D": ["green", "republican"]
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
   },
   {
@@ -137,10 +225,21 @@
       "D": "Minimize government control and allow local communities to manage safety."
     },
     "answers": {
-      "A": ["libertarian", "democrat"],
-      "B": ["democrat"],
-      "C": ["republican", "democrat"],
-      "D": ["green", "republican"]
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
   },
   {
@@ -153,10 +252,21 @@
       "D": "Limit government involvement and allow communities to create solutions."
     },
     "answers": {
-      "A": ["libertarian", "democrat"],
-      "B": ["democrat"],
-      "C": ["republican", "democrat"],
-      "D": ["green", "republican"]
+      "A": [
+        "libertarian",
+        "democrat"
+      ],
+      "B": [
+        "democrat"
+      ],
+      "C": [
+        "republican",
+        "democrat"
+      ],
+      "D": [
+        "green",
+        "republican"
+      ]
     }
   }
 ]
