@@ -11,10 +11,10 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class SurveyManager {
-    private final List<Integer> republican;
-    private final List<Integer> democrat;
-    private final List<Integer> green;
-    private final List<Integer> libertarian;
+    final List<Integer> republican;
+    final List<Integer> democrat;
+    final List<Integer> green;
+    final List<Integer> libertarian;
 
     public SurveyManager() {
         this.republican = new ArrayList<>();
