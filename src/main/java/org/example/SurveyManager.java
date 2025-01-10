@@ -1,10 +1,12 @@
 package org.example;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import org.example.helper.QuestionReader;
 import org.example.model.Question;
 
-import java.io.File;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -39,31 +41,23 @@ public class SurveyManager {
                     String answer = scanner.nextLine().trim().toUpperCase();
                     Map<String, List<String>> predictionAnswers = question.getAnswers();
                     List<String> parties = predictionAnswers.get(answer);
-                    switch (answer) {
-                        case "A" ->  {
-                            republican.add(question.getId());
-                        }
 
-                        case "B" -> {
-                                democrat.add(question.getId());
-
-                        }
-                        case "C" ->
-                                {
-                                    green.add(question.getId());
-
-                                }
-                        case "D" -> {
-                            libertarian.add(question.getId());
-
-                        }
-                        default -> {
-                            attempts++;
-                            if (attempts < 4) {
-                                System.out.println("Invalid choice, please try again.");
-                            } else {
-                                System.out.println("You have exceeded the maximum attempts for this question.");
+                    if (parties != null) {
+                        for (String partie : parties) {
+                            switch (partie.toLowerCase()) {
+                                case "republican" -> republican.add(question.getId());
+                                case "democrat" -> democrat.add(question.getId());
+                                case "green" -> green.add(question.getId());
+                                case "libertarian" -> libertarian.add(question.getId());
                             }
+                        }
+                        break;
+                    } else {
+                        attempts++;
+                        if (attempts < 4) {
+                            System.out.println("Invalid choice, please try again.");
+                        } else {
+                            System.out.println("You have exceeded the maximum attempts for this question.");
                         }
                  }
                 }
@@ -72,10 +66,12 @@ public class SurveyManager {
     }
 
     public void showSelections() {
+        System.out.println("----");
         System.out.println("Republican Choices: " + Arrays.toString(republican.toArray()));
         System.out.println("Democrat Choices: " + Arrays.toString(democrat.toArray()));
         System.out.println("Green Choices: " + Arrays.toString(green.toArray()));
         System.out.println("Liberal Choices: " + Arrays.toString(libertarian.toArray()));
+        System.out.println("----");
     }
 
     public String determinePredictedParty() {
@@ -95,15 +91,34 @@ public class SurveyManager {
     }
 
 
-    public void saveSurveyResults(String fileName)  throws  Exception {
-        ObjectMapper mapper = new ObjectMapper();
-        Map<String, Object> surveyData = new HashMap<>();
-        surveyData.put("republican", republican);
-        surveyData.put("democrat", democrat);
-        surveyData.put("green", green);
-        surveyData.put("libertarian", libertarian);
-        surveyData.put("timestamp", LocalDateTime.now().toString());
-        surveyData.put("userId", UUID.randomUUID().toString());
-        mapper.writeValue(new File(fileName), surveyData);
+    public void saveSurveyResults(String fileName)  throws  IOException {
+        File file = new File(fileName);
+
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
+
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            writer.write("Survey Results: ");
+            writer.newLine();
+            writer.write("--------");
+            writer.newLine();
+            writer.write("Republican:" + republican);
+            writer.newLine();
+            writer.write("Democrat:" + democrat);
+            writer.newLine();
+            writer.write("Green:" + green);
+            writer.newLine();
+            writer.write("Libertarian:" + libertarian);
+            writer.newLine();
+        }
     }
+
+    public void showAffiliatedParty() {
+        System.out.println("----");
+        String affiliatedParty = determinePredictedParty();
+        System.out.println("Based on your responses, your affiliated party is: " + affiliatedParty);
+        System.out.println("----");
+    }
+
 }
