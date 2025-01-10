@@ -33,7 +33,7 @@ class SurveyManagerTest {
         surveyManager.republican.add(2);
         surveyManager.democrat.add(3);
 
-        // Test the prediction logic.
+
         String predictedParty = surveyManager.determinePredictedParty();
         assertEquals("Republican", predictedParty, "The predicted party should be Republican.");
     }
