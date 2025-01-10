@@ -114,6 +114,36 @@ public class SurveyManager {
         }
     }
 
+
+
+    private void writeResponsesToFile(String fileName, List<Integer> responses) throws Exception {
+
+        File dataFolder = new File("data");
+        if (!dataFolder.exists()) {
+            dataFolder.mkdir();
+        }
+
+
+        File file = new File(dataFolder, fileName);
+
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            for (Integer response : responses) {
+                writer.write(response + System.lineSeparator());
+            }
+            System.out.println("Responses saved to " + file.getAbsolutePath());
+        }
+    }
+
+    // write to each file
+    public void saveResponsesByParty() throws Exception {
+        writeResponsesToFile("republican_responses.txt", republican);
+        writeResponsesToFile("democrat_responses.txt", democrat);
+        writeResponsesToFile("green_responses.txt", green);
+        writeResponsesToFile("libertarian_responses.txt", libertarian);
+    }
+
+
     public void showAffiliatedParty() {
         System.out.println("----");
         String affiliatedParty = determinePredictedParty();
