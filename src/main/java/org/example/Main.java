@@ -9,9 +9,9 @@ public class Main {
         surveyManager.conductSurvey();
         surveyManager.showSelections();
         surveyManager.showAffiliatedParty();
-        surveyManager.saveSurveyResults("surveyResults.json");
+        //surveyManager.saveSurveyResults("surveyResults.json");
 
-       // save survey results to a file
+
         String fileName = "output/survey_results.txt";
         surveyManager.saveSurveyResults(fileName);
 

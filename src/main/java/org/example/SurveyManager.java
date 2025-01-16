@@ -1,5 +1,5 @@
 package org.example;
-
+import java.util.ArrayList;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -28,6 +28,7 @@ public class SurveyManager {
             System.out.println("Welcome to the political survey!");
             final QuestionReader questionReader = new QuestionReader();
             final Question[] questions = questionReader.getQuestionsFromJson();
+            final Set<String> validChoices = new HashSet<>(Set.of("A", "B", "C", "D"));
             for (final Question question : questions) {
                 System.out.println(question.getTitle());
                 final Map<String, String> choice = question.getChoices();
@@ -39,6 +40,18 @@ public class SurveyManager {
 
                 while (attempts < 4 ) {
                     String answer = scanner.nextLine().trim().toUpperCase();
+
+                    // check answer is null
+                    if (answer.isEmpty() || validChoices.contains(answer)) {
+                        attempts++;
+                        if (attempts < 4) {
+                            System.out.println("Invalid input. You have " + (4 - attempts) + " attempts remaining. Please enter A, B, C, or D.");
+                        } else {
+                            System.out.println("You have exceeded the maximum attempts. Moving on to the next question.");
+                        }
+                        continue;
+                    }
+
                     Map<String, List<String>> predictionAnswers = question.getAnswers();
                     List<String> parties = predictionAnswers.get(answer);
 
@@ -90,29 +103,40 @@ public class SurveyManager {
         }
     }
 
+    public void saveSurveyResults(String fileName) throws IOException {
+        saveToFile("data/republican.txt", republican);
+        saveToFile("data/democrat.txt", democrat);
+        saveToFile("data/green.txt", green);
+        saveToFile("data/libertarian.txt", libertarian);
+    }
 
-    public void saveSurveyResults(String fileName)  throws  IOException {
+    private void saveToFile(String fileName, List<Integer> data) throws IOException {
         File file = new File(fileName);
 
+        // Ensure parent directory exists
         if (!file.getParentFile().exists()) {
             file.getParentFile().mkdirs();
         }
 
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+        // Write data to the file
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write("Survey Results: ");
             writer.newLine();
             writer.write("--------");
             writer.newLine();
-            writer.write("Republican:" + republican);
-            writer.newLine();
-            writer.write("Democrat:" + democrat);
-            writer.newLine();
-            writer.write("Green:" + green);
-            writer.newLine();
-            writer.write("Libertarian:" + libertarian);
-            writer.newLine();
+
+            if (data.isEmpty()) {
+                writer.write("No results available.");
+            } else {
+                for (Integer entry : data) {
+                    writer.write(entry);
+                    writer.newLine();
+                }
+            }
         }
+        System.out.println("Results written to " + fileName);
     }
+
 
 
 
@@ -145,10 +169,8 @@ public class SurveyManager {
 
 
     public void showAffiliatedParty() {
-        System.out.println("----");
         String affiliatedParty = determinePredictedParty();
         System.out.println("Based on your responses, your affiliated party is: " + affiliatedParty);
-        System.out.println("----");
     }
 
 }
